@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+
+/*** .main_visual ***/
+
+.main_visual {
+    /* width: 430px; */
+    height: 295px;
+    border-radius: 0 0 70px 70px;
+    box-shadow: 0 4px 45px rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+.main_visual figure {
+    width: calc(100% - 40px);
+    height: 110px;
+    border-radius: 70px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+.main_visual figure img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+/*** .cont01 ***/
+
+.cont01 {
+    padding-top: 60px;
+}
+.cont01 .list {
+    display: flex;
+    justify-content: space-between;
+}
+.cont01 .list .item {
+    width: calc(100% / 4 - 10px);
+}
+.cont01 .list .item figure {
+    height: 160px;
+    /* heigth 값 수치 만큼 고정 . 화면이 늘어나도 160값 고정이 되어 안늘어남 */
+    border-radius: 10px;
+    overflow: hidden;
+}
+.cont01 .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cont01 .list .item p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/*** .cont02 ***/
+
+.cont02 {
+    padding-top: 50px;
+}
+.cont02 .list {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    height: 160px;
+    padding: 0 20px;
+}
+.cont02 .list figure {
+    border-radius: 10px;
+    overflow: hidden;
+    width: 102px;
+    height: 124px;
+    margin-right: 11px;
+}
+.cont02 .list figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cont02 .list .info p {
+    margin-top: 3px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+
+
+/* 뷰포트 430px 이하일 때
+cont01 .list .item 중에서
+마지막에 있는 item은 삭제
+width값을 3등분하고 간격 10px씩 잡히도록 설정 */
+
+@media screen and (max-width: 430px) {
+    .cont01 .list .item {
+        width: calc(100% / 3 - 10px);
+    }
+    .cont01 .list .item:nth-child(4) {
+        display: none;
+    }
+}
+

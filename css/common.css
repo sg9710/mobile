@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+/* 웹폰트 */
+/* 초기값, *, li, a, body.... */
+/* 공통스타일 .title, header, 
+.bottom_menu, .inner .... */
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    line-height: 1;
+    color: #333;
+    font-family: 'GmarketSansMedium';
+    margin-bottom: 60px;
+}
+
+.inner {
+    /* width: calc(100% - 40px); */
+    width: 1280px;
+    margin: 0 auto;
+}
+.title {
+    margin-bottom: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title h3 {
+    font-size: 20px;
+}
+
+/*** header ***/
+
+header {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+}
+header h1 {
+    font-size: 30px;
+}
+header nav ul {
+    display: flex;
+    margin-top: 15px;
+}
+header nav ul li {
+    margin-right: 15px;
+}
+
+/*** .bottom_menu ***/
+
+.bottom_menu {
+    width: 100%;
+    
+    height: 55px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+    border-radius: 15px 15px 0 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #fff; 
+}
+.bottom_menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 40px;
+}
+.bottom_menu ul li a {
+    display: flex;
+}
+
+/* 뷰포트 1280px 이하일 때
+스타일 적용 */
+
+@media screen and (max-width: 1280px) {
+    .inner {width: calc(100% - 40px);}
+}

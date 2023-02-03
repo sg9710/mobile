@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+/* sub파일 안에서 header 변경 */
+
+header {
+    position: relative;
+    top: 0;
+    margin-top: 50px;
+}
+
+/*** .cont01 ***/
+
+.cont01 {
+    padding-top: 60px;
+}
+.cont01 .list {
+    display: flex;
+    align-items: center;
+    /* width: 390px; */
+    height: 160px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 0 20px;
+}
+.cont01 .list figure {
+    border-radius: 10px;
+    overflow: hidden;
+    width: 102px;
+    height: 124px;
+}
+.cont01 .list figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cont01 .list .info {
+    margin-left: 11px;
+}
+.cont01 .list .info p {
+    font-size: 14px;
+    margin: 3px 0 20px;
+}
+.cont01 .list .info a {
+    display: block;
+    font-size: 14px;
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: #1C3473;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+}
+
+/*** .cont02 ***/
+
+.cont02 {
+    padding-top: 50px;
+}
+.cont02 .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cont02 .list .item {
+    width: calc(100% / 3 - 10px);
+    margin-bottom: 25px;
+}
+.cont02 .list .item figure {
+    height: 124px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.cont02 .list .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cont02 .list .item p {
+    margin-top: 10px;
+    font-size: 14px;   
+}
